@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "Fascinate";
+    src: url("../public/font/Fascinate-Regular.ttf");
+}
+
+.container {
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: relative;
+}
+
+.container_main {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "overlap";
+    place-content: center;
+    text-transform: uppercase;
+    user-select: none;
+    text-align: center;
+}
+
+.name {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: #363833;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: clamp(2em, 7vw, 6rem);
+    grid-area: overlap;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 4px transparent;
+}
+
+.bg {
+    background-image: repeating-linear-gradient(105deg, #38afff 0%, #1d4f77 5%, #38afff 12%);
+    color: transparent;
+    filter: drop-shadow(5px 15px 15px black);
+    transform: scaleY(1.05);
+    transform-origin: top;
+}
+
+.fg {
+    background-image: repeating-linear-gradient(5deg, #38afff 0%, #04243e 23%, #38afff 31%);
+    color: #1e2127;
+    transform: scale(1);
+}
+
+.position {
+    font: bold 2.5vw/1.2 "Signika", sans-serif;
+    user-select: none;
+    text-align: center;
+}
+
+.positionLetter {
+    display: inline-block;
+    font-family: Fascinate;
+    animation: float 0.3s ease-in-out infinite;
+    --shadow-color: 220deg 50% 60%;
+    text-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34), 1.5px 2.9px 3.7px hsl(var(--shadow-color) / 0.34),
+        2.7px 5.4px 6.8px hsl(var(--shadow-color) / 0.34), 4.5px 8.9px 11.2px hsl(var(--shadow-color) / 0.34),
+        7.1px 14.3px 18px hsl(var(--shadow-color) / 0.34), 11.2px 22.3px 28.1px hsl(var(--shadow-color) / 0.34),
+        17px 33.9px 42.7px hsl(var(--shadow-color) / 0.34), 25px 50px 62.9px hsl(var(--shadow-color) / 0.34);
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: none;
+    }
+    33% {
+        transform: translateY(-1px) rotate(-2deg);
+    }
+    66% {
+        transform: translateY(1px) rotate(2deg);
+    }
+}
+
+.position:hover .positionLetter {
+    animation: bounce infinite 1s;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translate(0);
+    }
+    25% {
+        transform: rotateX(20deg) translateY(5px) rotate(-3deg);
+    }
+    50% {
+        transform: translateY(-50px) rotate(3deg) scale(1.1);
+    }
+}
+
+.positionLetter {
+    animation-delay: calc(var(--i) * 0.025s) !important;
+}
+
+.socialButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.socialIcon {
+    width: 100px;
+    height: 100px;
+}
+
+.lottieAnima {
+    width: 300px;
+    height: 300px;
+}
+
+@media screen and (max-width: 1024px) {
+    .socialIcon {
+        width: 75px;
+        height: 75px;
+    }
+    .lottieAnima {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .name {
+        font-size: clamp(3em, 16vw, 9rem);
+    }
+    .position {
+        font: bold 6vw/1.2 "Signika", sans-serif;
+        text-align: center;
+        padding: 0 1em;
+    }
+    .socialIcon {
+        width: 50px;
+        height: 50px;
+    }
+    .lottieAnima {
+        width: 180px;
+        height: 180px;
+    }
+    .container_main {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .socialIcon {
+        width: 75px;
+        height: 75px;
+    }
+    .lottieAnima {
+        width: 220px;
+        height: 220px;
+    }
+    .name {
+        font-size: clamp(5em, 20vw, 16rem);
+    }
+    .position {
+        font: bold 8vw/1.2 "Signika", sans-serif;
+    }
+}

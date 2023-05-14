@@ -1,0 +1,310 @@
+.container {
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: relative;
+}
+
+.container_main {
+    width: 100%;
+    height: calc(100vh - 90px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainBody {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.displaySection {
+    width: 80%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    gap: 2em;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.listSection {
+    width: 20%;
+    background-color: #00000010;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card_cover {
+    background-image: var(--background);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    height: 400px;
+    top: -20%;
+    left: 0;
+    will-change: top;
+    background-size: cover;
+    background-position: center;
+    filter: blur(30px);
+    transform: scale(1.2);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.card_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card_top {
+    margin-bottom: 20px;
+}
+
+.card_middle {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card_bottom {
+    padding: 0 10px;
+    color: rgb(34, 34, 34);
+    font-size: 17px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.job_position {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Acme;
+    letter-spacing: 2px;
+}
+
+.title_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card_title {
+    font-size: 22px;
+    color: lightgray;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.duration {
+    font-size: 18px;
+    color: white;
+}
+
+.swiper {
+    width: 700px;
+    height: 550px;
+}
+
+.swiper_slide {
+    display: flex;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    background-color: white;
+}
+
+.sub_swiper {
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+}
+
+.sub_swiper_body {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.sub_swiper_slide {
+    display: flex;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s;
+    padding: 20px;
+    background-color: white;
+}
+
+.icon_group {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.description {
+    width: 240px;
+    color: lightgray;
+}
+
+.about_text {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.achievements {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.list_button {
+    outline: none;
+    border: none;
+    background-color: #ffffff10;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    text-align: start;
+    padding: 10px 20px;
+}
+
+.listButton_title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: Acme;
+    color: #1779db;
+}
+
+.listButton_project {
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.listButton_duration {
+    font-size: 12px;
+    font-family: cursive;
+}
+
+.education {
+    width: 700px;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.education_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.education_title {
+    font-family: Acme;
+    color: #1779db;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.education_duration {
+    font-size: 18px;
+    color: #1779db;
+    font-family: cursive;
+}
+
+@media screen and (max-width: 1536px) {
+    .displaySection {
+        width: 100%;
+    }
+    .listSection {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .swiper {
+        width: 500px;
+    }
+    .education {
+        width: 500px;
+    }
+    .card_middle {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about_text {
+        color: black;
+    }
+    .description {
+        width: 100%;
+        color: gray;
+        margin-bottom: 20px;
+    }
+    .swiper_slide {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .displaySection {
+        margin: 50px 0;
+        margin-left: -30px;
+    }
+    .job_position {
+        font-size: 24px;
+    }
+    .card_title {
+        font-size: 18px;
+    }
+    .duration {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .displaySection {
+        margin-left: 0px;
+    }
+    .swiper {
+        width: 300px;
+    }
+    .education {
+        width: 300px;
+    }
+    .sub_swiper {
+        width: 250px;
+        height: 150px;
+    }
+    .title_group {
+        flex-direction: column;
+    }
+    .icon_group {
+        margin-top: 10px;
+    }
+    .job_position {
+        font-size: 24px;
+    }
+}

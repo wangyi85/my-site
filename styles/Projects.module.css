@@ -1,0 +1,144 @@
+.container {
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: relative;
+}
+
+.container_main {
+    width: 100%;
+    height: calc(100vh - 90px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainBody {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.displaySection {
+    width: 80%;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow-x: hidden;
+    overflow-y: auto;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.listSection {
+    width: 20%;
+    background-color: #00000010;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projectDetail {
+    background-color: #00000030;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 100%;
+    border-radius: 10px;
+}
+
+.swiperSection {
+    width: 100%;
+    height: 180px;
+}
+
+.detailSection {
+    padding: 20px;
+}
+
+.swiper_body {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.swiper_slide {
+    display: flex;
+    color: #fff;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.titleGroup {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.projectTitle {
+    font-size: 20px;
+    font-family: Acme;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #1779db;
+}
+
+.projectLink {
+    width: 22px;
+    height: 22px;
+    color: #1779db;
+    cursor: pointer;
+}
+
+.projectDescription {
+    color: lightgray;
+}
+
+.skillSet {
+    margin-top: 10px;
+}
+
+.skillSetImage {
+    margin-left: 5px;
+}
+
+.projectList {
+    outline: none;
+    border: none;
+    background-color: #ffffff10;
+    color: #1779db;
+    width: 100%;
+    cursor: pointer;
+    text-align: start;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: Acme;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media screen and (max-width: 1536px) {
+    .displaySection {
+        width: 100%;
+    }
+    .listSection {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .displaySection {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .displaySection {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}

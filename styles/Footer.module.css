@@ -1,0 +1,53 @@
+.container {
+    width: 100%;
+    background-color: #1779db;
+    position: absolute;
+    bottom: 0;
+    font-size: 13.6px;
+}
+
+.main {
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftSide {
+    display: flex;
+    gap: 15px;
+}
+
+.rightSide {
+    display: flex;
+    gap: 15px;
+}
+
+.mainFork {
+    gap: 3px;
+    width: min-content;
+    color: white;
+}
+
+.statusGroup {
+    gap: 3px;
+}
+
+.goLive {
+    gap: 3px;
+}
+
+.prettier {
+    gap: 3px;
+}
+
+.hoverEffect {
+    padding: 2px 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.hoverEffect:hover {
+    background-color: #ffffff15;
+}

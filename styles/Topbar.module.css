@@ -1,0 +1,43 @@
+.container {
+    width: calc(100vw - 22em);
+    height: min-content;
+    display: flex;
+    align-items: center;
+    background-color: #1f2428;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 20px;
+    width: min-content;
+    border-right: 2px solid #24292e;
+    cursor: pointer;
+    font-size: 14.5px;
+}
+
+.selectedTopBar {
+    border-top: 2px solid #1779db;
+    background-color: #24292e;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: calc(100vw - 16em);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: calc(100vw - 4em);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width: 100vw;
+    }
+}
